@@ -22,3 +22,12 @@ registry:
 ```
 
 Чтобы запустить репозиторий достаточно ввести команду `docker-compose up -d` в директории с docker-compose файлом. 
+
+Для тестирования нашего репозитория выполним следующие команды:
+
+```
+docker pull ubuntu
+docker tag ubuntu myregistrydomain.com:443/ubuntu
+docker push myregistrydomain.com:443/ubuntu
+docker pull myregistrydomain.com:443/ubuntu
+```
